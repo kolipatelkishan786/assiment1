@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ export class AppComponent {
   log =[];
   onToggleDatails() {
       this.showSecret = !this.showSecret;
-      this.log.push(this.log.length + 1);
+     /* this.log.push(this.log.length + 1);*/
+    this.log.push(new Date());
   }
 }
