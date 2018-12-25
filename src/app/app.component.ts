@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Kishan-assigment1';
+  showSecret = false;
+  log =[];
+  onToggleDatails() {
+      this.showSecret = !this.showSecret;
+      this.log.push(this.log.length + 1);
+  }
 }
