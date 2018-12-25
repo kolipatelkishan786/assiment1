@@ -23,9 +23,9 @@
       <button class="btn btn-primary" (click)="onToggleDatails()">Display Details</button>
       <p *ngIf="showSecret">Secret password = tuna</p>
       <div
-        *ngFor="let logitem of log"
-        [ngStyle]="{backgroundColor: logitem >= 5 ? 'blue' : 'transparent'}"
-        [ngClass]="{'white-text': logitem >=5}">{{logitem}}</div>
+        *ngFor="let logitem of log; let i = index"
+        [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': i >= 4}">{{logitem}}</div>
 
     </div>
   </div>
